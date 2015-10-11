@@ -11,6 +11,6 @@ docker run --name=$CONTAINER -a STDOUT -a STDERR $IMAGE dnf update -y > /var/log
 docker commit -m 'Daily Update' $CONTAINER $IMAGE
 #Nedd the credentials stored in .dockercfg
 docker login -u $USER
-docker push $IMAGE
+docker push -f $IMAGE
 
 
