@@ -4,7 +4,7 @@
 
 USER="imcsk8"
 CONTAINER="fedora-22-server-x86_64"
-IMAGE="imcsk8/fedora-22-server-x86_64:22"
+IMAGE="imcsk8/fedora-22-server-x86_64"
 
 docker rm $CONTAINER
 docker run --name=$CONTAINER -a STDOUT -a STDERR $IMAGE dnf update -y > /var/log/docker/$CONTAINER-update.log
