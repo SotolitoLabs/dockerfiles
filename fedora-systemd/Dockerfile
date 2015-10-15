@@ -1,4 +1,4 @@
-FROM sotolitolabs/fedora-22-base
+FROM imcsk8/fedora-22-server-x86_64
 MAINTAINER “Iván Chavero” <ichavero@chavero.com.mx>
 # Based on the dockerfile created by: “Dan Walsh” <dwalsh@redhat.com>
 ENV container docker
