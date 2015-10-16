@@ -3,7 +3,7 @@ MAINTAINER “Iván Chavero” <ichavero@chavero.com.mx>
 # Based on the dockerfile created by: “Dan Walsh” <dwalsh@redhat.com>
 ENV container docker
 RUN dnf -y update; dnf clean all
-RUN dnf -y install systemd; dnf clean all;\
+RUN dnf -y install systemd procps-ng; dnf clean all;\
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 rm -f /lib/systemd/system/multi-user.target.wants/*;\
 rm -f /etc/systemd/system/*.wants/*;\
