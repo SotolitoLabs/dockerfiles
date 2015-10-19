@@ -1,4 +1,4 @@
-FROM imcsk8/fedora-22-server-x86_64
+FROM imcsk8/fedora-22-systemd-x86_64
 MAINTAINER “Iván Chavero” <ichavero@chavero.com.mx>
 ENV container docker
 RUN dnf -y update
