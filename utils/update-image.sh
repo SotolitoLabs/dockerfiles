@@ -3,8 +3,12 @@
 #Updates the Fedora 22 image 
 
 USER="imcsk8"
-CONTAINER="fedora-22-server-x86_64"
+CONTAINER="temporal-image-update"
 IMAGE="imcsk8/fedora-22-server-x86_64"
+
+if [[$1 != ""]]; then
+    IMAGE=$1
+fi
 
 docker rm $CONTAINER
 docker run --name=$CONTAINER -a STDOUT -a STDERR $IMAGE dnf update -y > /var/log/docker/$CONTAINER-update.log
